@@ -3,11 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Destroying
     - GameOver
+    - HighScore
     - Movement
     - Scoreincrease
     - Spawn
     - TimeScript
-    - updateHs
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -70,19 +70,16 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: GameOver
-    methodName: RestartGane
+    methodName: RestartGame
   - assembly: Assembly-CSharp
     fullTypeName: GameOver
     methodName: ExitGame
   - assembly: Assembly-CSharp
     fullTypeName: GameOver
-    methodName: RestartGane
+    methodName: RestartGame
   - assembly: Assembly-CSharp
     fullTypeName: GameOver
     methodName: ExitGame
-  - assembly: Assembly-CSharp
-    fullTypeName: GameOver
-    methodName: RestartGane
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -254,17 +251,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 4994}
-    - Class: 114
       Script: {instanceID: 5240}
     - Class: 114
       Script: {instanceID: 5534}
     - Class: 114
-      Script: {instanceID: 5682}
-    - Class: 114
       Script: {instanceID: 5996}
-    - Class: 114
-      Script: {instanceID: 6320}
     - Class: 114
       Script: {instanceID: 7084}
     - Class: 115
@@ -283,7 +274,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Walked50.unity:
+    Assets/Scenes/Victory.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -989,10 +980,10 @@ ScriptsOnlyBuild:
     className: UnityOnDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ab326a4fb12e874568b572f77f927309
+      Hash: 9919700f6d7d34b8ebdb363a26366968
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: updateHs
+    className: HighScore
   - hash:
       serializedVersion: 2
       Hash: 20a120e55ad3ab65556328d5fd8309dd
@@ -1208,6 +1199,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/Start.unity
-  - Assets/Scenes/Walked50.unity
-  playerPath: C:/Users/tharu/Downloads/Game/Doofus-Adventure-Game-main/Output/Doofus
-    Adventure Game.exe
+  - Assets/Scenes/Victory.unity
+  playerPath: C:/Users/tharu/Downloads/Doofus Adventure Game/HW_2024_Test/Doofus
+    Adventure Game/Final Game/Doofus Adventure Game.exe
