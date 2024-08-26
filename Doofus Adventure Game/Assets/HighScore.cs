@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class updateHs : MonoBehaviour
+public class HighScore : MonoBehaviour
 {
     [SerializeField] TMP_Text highScore;
     void Start()
