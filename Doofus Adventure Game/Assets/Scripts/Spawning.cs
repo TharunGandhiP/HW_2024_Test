@@ -9,16 +9,12 @@ public class Spawn : MonoBehaviour
     public GameObject ScoreObject;
     [SerializeField] TMP_Text Timer;
 
-    public float initialSpawnDelay = 5f;  
-    public float platformLifetime = 4f;
-    public float spawnInterval = 2.5f;
+    public float initialSpawnDelay;  
+    public float platformLifetime;
+    public float spawnInterval;
     public float ScoreLifetime = 1f;
 
-    private void Start()
-    {
-        LoadSpawnDataFromJson();
-        InvokeRepeating("SpawnPlatform", initialSpawnDelay, spawnInterval);
-    }
+    
 
     void LoadSpawnDataFromJson()
     {
@@ -28,14 +24,19 @@ public class Spawn : MonoBehaviour
             GameData gameData = JsonUtility.FromJson<GameData>(jsonFile.text);
 
             initialSpawnDelay = gameData.pulpit_data.pulpit_spawn_time; // Set initial spawn delay
-            platformLifetime = gameData.pulpit_data.min_pulpit_destroy_time; // Set platform lifetime
+            platformLifetime = Random.Range(gameData.pulpit_data.min_pulpit_destroy_time, gameData.pulpit_data.max_pulpit_destroy_time);// Set platform lifetime
             spawnInterval = gameData.pulpit_data.pulpit_spawn_time; // Set spawn interval
-            ScoreLifetime = gameData.pulpit_data.max_pulpit_destroy_time; // Set score card lifetime
         }
         else
         {
             Debug.LogError("JSON file not found!");
         }
+    }
+
+    private void Start()
+    {
+        LoadSpawnDataFromJson();
+        InvokeRepeating("SpawnPlatform", initialSpawnDelay, spawnInterval);
     }
 
     void SpawnPlatform()
@@ -60,16 +61,16 @@ public class Spawn : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                pos2 = new Vector3(6, 0, 0);
+                pos2 = new Vector3(9, 0, 0);
                 break;
             case 1:
-                pos2 = new Vector3(0, 0, 6);
+                pos2 = new Vector3(0, 0, 9);
                 break;
             case 2:
-                pos2 = new Vector3(-6, 0, 0);
+                pos2 = new Vector3(-9, 0, 0);
                 break;
             case 3:
-                pos2 = new Vector3(0, 0, -6);
+                pos2 = new Vector3(0, 0, -9);
                 break;
             default:
                 pos2 = new Vector3(0, 0, 0);
