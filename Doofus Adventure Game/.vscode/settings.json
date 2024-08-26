@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Doofus-Adventure-Game-main.sln"
+    "dotnet.defaultSolution": "Doofus Adventure Game.sln"
 }
