@@ -22,14 +22,11 @@ public class Spawn : MonoBehaviour
 
     void LoadSpawnDataFromJson()
     {
-        // Load the JSON file from the Resources folder
         TextAsset jsonFile = Resources.Load<TextAsset>("player_data");
         if (jsonFile != null)
         {
-            // Parse the JSON data into GameData object
             GameData gameData = JsonUtility.FromJson<GameData>(jsonFile.text);
 
-            // Update the spawn settings from the JSON data
             initialSpawnDelay = gameData.pulpit_data.pulpit_spawn_time; // Set initial spawn delay
             platformLifetime = gameData.pulpit_data.min_pulpit_destroy_time; // Set platform lifetime
             spawnInterval = gameData.pulpit_data.pulpit_spawn_time; // Set spawn interval

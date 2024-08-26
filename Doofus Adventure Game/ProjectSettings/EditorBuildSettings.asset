@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: e81095c09d547fb4a8e4ea6ef1f50c13
   - enabled: 1
-    path: Assets/Scenes/Walked50.unity
+    path: Assets/Scenes/Victory.unity
     guid: ba7d512ff3f60574c97aebf7a0d73f76
   m_configObjects: {}
