@@ -22,6 +22,7 @@ public class Scoreincrease : MonoBehaviour
             if (score == 50)
             {
                 SceneManager.LoadScene(3);
+                score = 50;
             }
         }
     }

@@ -11,9 +11,9 @@ public class TimeScript : MonoBehaviour
     [SerializeField] float remainingTime;
     void Update()
     {
-        UpdateTimerText();
+        UpdateTimer();
     }
-    void UpdateTimerText()
+    void UpdateTimer()
     {
         if (remainingTime > 0)
         {
